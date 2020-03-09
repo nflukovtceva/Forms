@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Form</title>
+</head>
+<body>
+    <hr>
+    <form method="POST">
+        <h1>Add Form</h1>
+        <!-- All form inputs for Artist Information seperated by line breaks-->
+        <section class="Artist Information">
+            <label for="Fname"> Artist's first name:</label>
+            <input type="text" name="Fname" id="Fname" minlength="1" maxlength="50" required>
+            <br>
+            <br>
+            <label for="Lname">Artist's last name:</label>
+            <input type="text" name="Lname" id="Lname" minlength="1" maxlength="50" required>
+            <br>
+            <br>
+            <label for="Phone">Artist's phone number (with area code):</label>
+            <input type="tel" name="Phone" id="Phone"placeholder="907-123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <br>
+            <br>
+            <label for="Address1">Artist's primary address:</label>
+            <input type="text" name="Address1" id="Address1" placeholder="1234 Random St." required>
+            <br>
+            <br>
+            <label for="Address2">Artist's alternate address:</label>
+            <input type="text" name="Address2" id="Address2">
+            <br>
+            <br>
+            <label for="State">Artists state:</label>
+            <input type="text" name="State" id="State" minlength="3" maxlength="50" required>
+            <br>
+            <br>
+            <label for="City">Artist's city:</label>
+            <input type="text" name="City" id="City" maxlength="50" required>
+            <br>
+            <br>
+            <label for="Zip">Artist's zip code:</label>
+            <input type="text" name="Zip" id="Zip" minlength="5" maxlength="5" placeholder="99508" required>
+            <br>
+            <br>
+            <label for="Shareholder">Is the artist a shareholder?</label>
+            <input type="checkbox" name="Shareholder" id="Shareholder">
+        </section>
+        <!-- All form inputs for Art Information seperated for line breaks-->
+        <hr>
+        <section class="Art Information">
+            <label for="Title">Name of the art piece:</label>
+            <input type="text" name="Title" id="Title"  maxlength="10" required>
+            <br>
+            <br>
+            <label for="Type">Material the artwork is made out of:</label>
+            <input type="text" name="Type" id="Type"  maxlength="10">
+            <br>
+            <br>
+            <label for="Purchase_Price">How much did we pay for it?</label>
+            <input type="number" name="Purchase_Price" id="Purchase_Price" min="0" max="9999999" step=".01">
+            <br>
+            <br>
+            <label for="Value">What is it worth?</label>
+            <input type="number" name="Value" id="Value" min="0" max="9999999" step=".01">
+            <br>
+            <br>
+            <label for="Acquireddt">When did we aquire this?</label>
+            <input type="date" name="Acquireddt" id="Acquireddt">
+            <br>
+            <br>
+            <label for="Description">Any extra information?</label>
+            <br>
+            <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+        <!-- Basic submission button-->
+        </section>
+        <hr>
+        <section class="submission">
+            <input type="submit" value="Submit">
+        </section>
+    </form>
+</body>
+</html>
