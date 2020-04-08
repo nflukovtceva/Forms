@@ -7,33 +7,27 @@
     <title>Move Form</title>
 </head>
 <body> 
-    <form method="POST">
-        <h1 align="center" class="page-header">Move Form</h1>
-            <h2>Art Location Information</h2>
+    <h1 align="center" class="page-header">Move Form</h1>
+        <h2>Art Location Information</h2>
+            <form method="POST">
                 <section class="Art Location Information">
-                        <label for="LocationID">Current Location ID</label>
+                        <label for="LocationID">Location ID</label>
                         <input type="number" name="LocationID" id="LocationID" min="0" max="9999999">
+                    <br>
                     <br>
                         <label for="ArtID">Art ID</label>
                         <input type="number" name="ArtID" id="ArtID" min="0" max="9999999">
                     <br>
+                    <br>
                         <input type="submit" value="Search">
                 </section>
-    </form>
-<!-- JavaScript for Move Form Output (ArtID, Title, Description(optional), image?)-->
-
-
-
-
-<!-- confirm Y/N -->
-            <section class="Confirm Y/N">
-                <br>
-                    <label for="Confirm">Confirm</label>
-                    <input type="checkbox" name="Confirm" id="Confirm">
-                <br>
-            </section>
-
-<!-- Art New Location Information-->
+            </form>
+                    <br>
+                    <br>
+                <section class="Confirm Y/N">
+                        <label for="Confirm">Confirm</label>
+                        <input type="checkbox" name="Confirm" id="Confirm">
+                </section>
         <h2>Choose the option</h2>
             <button onclick="NewLocation()">New Location</button>
                 <div class="selection" id=NewLocation>
@@ -45,20 +39,28 @@
                                         <option value="Nome">Nome</option>
                                     </select>
                             <br>
+                            <br>
                                 <label for="Building">Building</label>
                                     <select name="Building" id="Building" required>
                                         <option value="Anchorage">Anchorage1</option>
                                         <option value="Nome">Nome1</option>
                                     </select>
                             <br>
-                                    <label for="Floor">Floor</label>
-                                    <input type="number" name="Floor" id="Floor" min="1" max="9999999">
                             <br>
-                                    <label for="Room">Room</label>
-                                    <input type="number" name="Room" id="Room" min="1" max="9999999">
+                                <label for="Floor">Floor</label>
+                                <input type="number" name="Floor" id="Floor" min="1" max="9999999">
+                            <br>
+                            <br>
+                                <label for="Room">Room</label>
+                                <input type="number" name="Room" id="Room" min="1" max="9999999">
+                            <br>
                             <br>
                                 <label for="Description">Any extra information?</label>
                                 <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+                            <br> 
+                            <br>   
+                                <input type="hidden" id= ButtonID name="ButtonID" value="1" >
+                                <input type="submit" value="Submit">
                         </section>
                     </form>
                 </div>
@@ -69,38 +71,50 @@
                                 <label for="Date">Gift Date</label>
                                 <input type="date" name="Acquireddt" id="Acquireddt">
                             <br>
+                            <br>
                                 <label for="Description">Description</label>
                                 <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
-                            <br>
                         </section>
                     <h4>Recipient Information:</h4>
                         <section class="Recipient Information">
                                 <label for="Fname">First name</label>
                                 <input type="text" name="Fname" id="Fname" minlength="1" maxlength="50">
                             <br>
+                            <br>
                                 <label for="Lname">Last name</label>
                                 <input type="text" name="Lname" id="Lname" minlength="1" maxlength="50">
+                            <br>
                             <br>
                                 <label for="Phone">Phone number (with area code)</label>
                                 <input type="tel" name="Phone" id="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                             <br>
+                            <br>
                                 <label for="Email">Email</label>
                                 <input type="text" name="Email" id="Email">
+                            <br>
                             <br>
                                 <label for="Address1">Primary address</label>
                                 <input type="text" name="Address1" id="Address1">
                             <br>
+                            <br>
                                 <label for="Address2">Alternate address</label>
                                 <input type="text" name="Address2" id="Address2">
+                            <br>
                             <br>
                                 <label for="City">City</label>
                                 <input type="text" name="City" id="City" maxlength="50">
                             <br>
+                            <br>
                                 <label for="State">State</label>
                                 <input type="text" name="State" id="State" minlength="3" maxlength="50">
                             <br>
+                            <br>
                                 <label for="Zip">Zip code</label>
                                 <input type="text" name="Zip" id="Zip" minlength="5" maxlength="5">
+                            <br>
+                            <br>
+                                <input type="hidden" id= ButtonID name="ButtonID" value="2" >
+                                <input type="submit" value="Submit">
                         </section>
                     </form>
                 </div>
@@ -111,44 +125,102 @@
                                 <label for="Date">Loan Date Out</label>
                                 <input type="date" name="Acquireddt" id="Acquireddt">
                             <br>
+                            <br>
                                 <label for="Date">Requested Return Date</label>
                                 <input type="date" name="Acquireddt" id="Acquireddt">
                             <br>
+                            <br>
                                 <label for="Description">Description</label>
                                 <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
-                            <br>
                         </section>
                     <h4>Recipient Information:</h4>
                         <section class="Recipient Information">
                                 <label for="Fname">First name</label>
                                 <input type="text" name="Fname" id="Fname" minlength="1" maxlength="50">
                             <br>
+                            <br>
                                 <label for="Lname">Last name</label>
                                 <input type="text" name="Lname" id="Lname" minlength="1" maxlength="50">
+                            <br>
                             <br>
                                 <label for="Phone">Phone number (with area code)</label>
                                 <input type="tel" name="Phone" id="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                             <br>
+                            <br>
                                 <label for="Email">Email</label>
                                 <input type="text" name="Email" id="Email">
+                            <br>
                             <br>
                                 <label for="Address1">Primary address</label>
                                 <input type="text" name="Address1" id="Address1">
                             <br>
+                            <br>
                                 <label for="Address2">Alternate address</label>
                                 <input type="text" name="Address2" id="Address2">
+                            <br>
                             <br>
                                 <label for="City">City</label>
                                 <input type="text" name="City" id="City" maxlength="50">
                             <br>
+                            <br>
                                 <label for="State">State</label>
                                 <input type="text" name="State" id="State" minlength="3" maxlength="50">
                             <br>
+                            <br>
                                 <label for="Zip">Zip code</label>
                                 <input type="text" name="Zip" id="Zip" minlength="5" maxlength="5">
+                            <br>
+                            <br>
+                                <input type="hidden" id= ButtonID name="ButtonID" value="3" >
+                                <input type="submit" value="Submit">
                         </section>
                     </form>
                 </div>
+            <button onclick="ReturnLoan()">Return Loan</button>
+                <div class="selection" id=ReturnLoan>
+                    <form method="POST">
+                        <section class="Return Loan">
+                                <label for="Date">Return Date</label>
+                                <input type="date" name="Acquireddt" id="Acquireddt">
+                            <br>
+                            <br>
+                                <label for="Description">Description</label>
+                                <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+                        </section>
+                    <h4>New Artwork Location:</h4>
+                        <section class="Art New Location Information">
+                                <label for="City">City</label>
+                                    <select name="City" id="City" required>
+                                        <option value="Anchorage">Anchorage</option>
+                                        <option value="Nome">Nome</option>
+                                    </select>
+                            <br>
+                            <br>
+                                <label for="Building">Building</label>
+                                    <select name="Building" id="Building" required>
+                                        <option value="Anchorage">Anchorage1</option>
+                                        <option value="Nome">Nome1</option>
+                                    </select>
+                            <br>
+                            <br>
+                                <label for="Floor">Floor</label>
+                                <input type="number" name="Floor" id="Floor" min="1" max="9999999">
+                            <br>
+                            <br>
+                                <label for="Room">Room</label>
+                                <input type="number" name="Room" id="Room" min="1" max="9999999">
+                            <br>
+                            <br>
+                                <label for="Description">Any extra information?</label>
+                                <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+                            <br> 
+                            <br>   
+                                <input type="hidden" id= ButtonID name="ButtonID" value="4" >
+                                <input type="submit" value="Submit">
+                        </section>
+                    </form>
+                </div>
+
 <script>
     function NewLocation() {
     var x = document.getElementById("NewLocation");
@@ -173,10 +245,16 @@
     else {
     x.style.display = "none";}}
 </script>
-<hr>
-        <section class="submission">
-            <input type="submit" value="Submit">
-        </section>
+<script>
+    function ReturnLoan() {
+    var x = document.getElementById("ReturnLoan");
+    if (x.style.display === "none") {
+    x.style.display = "block";} 
+    else {
+    x.style.display = "none";}}
+</script>
+
+
     <script src="move-form.js"></script> 
 </body>
 </html>
