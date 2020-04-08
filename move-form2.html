@@ -3,72 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <title>Move Form</title>
 </head>
 <body> 
     <form method="POST">
-    <h1 align="center">Move Form</h1>
-
-        <h2>Art Location Information</h2>
-        <section class="Art Location Information">
-                <label for="LocationID">Current Location ID</label>
-                <input type="number" name="LocationID" id="LocationID" min="0" max="9999999">
-            <br>
-                <label for="ArtID">Art ID</label>
-                <input type="number" name="ArtID" id="ArtID" min="0" max="9999999">
-        </section> 
-
-<!-- Basic submission button for the results-->
-        <hr>
-        <section class="submission">
-            <input type="Search Location" value="Search Location">
-        </section>
-
-<!-- JavaScript for Move Form Output (Image, ArtID, Title, Description(optional))-->
+        <h1 align="center" class="page-header">Move Form</h1>
+            <h2>Art Location Information</h2>
+                <section class="Art Location Information">
+                        <label for="LocationID">Current Location ID</label>
+                        <input type="number" name="LocationID" id="LocationID" min="0" max="9999999">
+                    <br>
+                        <label for="ArtID">Art ID</label>
+                        <input type="number" name="ArtID" id="ArtID" min="0" max="9999999">
+                    <br>
+                        <input type="submit" value="Search">
+                </section>
+    </form>
+<!-- JavaScript for Move Form Output (ArtID, Title, Description(optional), image?)-->
 
 
 
 
 <!-- confirm Y/N -->
-        <section class="Confirm Y/N">
-            <br>
-                <label for="Confirm">Confirm</label>
-                <input type="checkbox" name="Confirm" id="Confirm">
-            <br>
-        </section>
-<!-- Art New Location Information-->
-        <h2>Art New Location Information</h2>
-        <section class="Art New Location Information">
-                <label for="City">City</label>
-                    <select name="City" id="City" required>
-                        <option value="Anchorage">Anchorage</option>
-                        <option value="Nome">Nome</option>
-                    </select>
-            <br>
-                <label for="Building">Building</label>
-                    <select name="Building" id="Building" required>
-                        <option value="Anchorage">Anchorage1</option>
-                        <option value="Nome">Nome1</option>
-                    </select>
-            <br>
-                    <label for="Floor">Floor</label>
-                    <input type="number" name="Floor" id="Floor" min="1" max="9999999" required>
-            <br>
-                    <label for="Room">Room</label>
-                    <input type="number" name="Room" id="Room" min="1" max="9999999" required>
-            <br>
-                <label for="Description">Any extra information?</label>
-                <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
-        </section>
+            <section class="Confirm Y/N">
+                <br>
+                    <label for="Confirm">Confirm</label>
+                    <input type="checkbox" name="Confirm" id="Confirm">
+                <br>
+            </section>
 
-<!-- Basic submission button-->
-        <hr>
+<!-- Art New Location Information-->
+        <h2>Choose the option</h2>
+            <button onclick="NewLocation()">New Location</button>
+                <div class="selection" id=NewLocation>
+                    <form method="POST">
+                        <section class="Art New Location Information">
+                                <label for="City">City</label>
+                                    <select name="City" id="City" required>
+                                        <option value="Anchorage">Anchorage</option>
+                                        <option value="Nome">Nome</option>
+                                    </select>
+                            <br>
+                                <label for="Building">Building</label>
+                                    <select name="Building" id="Building" required>
+                                        <option value="Anchorage">Anchorage1</option>
+                                        <option value="Nome">Nome1</option>
+                                    </select>
+                            <br>
+                                    <label for="Floor">Floor</label>
+                                    <input type="number" name="Floor" id="Floor" min="1" max="9999999">
+                            <br>
+                                    <label for="Room">Room</label>
+                                    <input type="number" name="Room" id="Room" min="1" max="9999999">
+                            <br>
+                                <label for="Description">Any extra information?</label>
+                                <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+                        </section>
+                    </form>
+                </div>
+            <button onclick="Gift()">Gift Artwork</button>
+                <div class="selection" id=Gift>
+                    <form method="POST">
+                        <section class="Gift Date">
+                                <label for="Date">Gift Date</label>
+                                <input type="date" name="Acquireddt" id="Acquireddt">
+                            <br>
+                                <label for="Description">Description</label>
+                                <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+                            <br>
+                        </section>
+                    <h4>Recipient Information:</h4>
+                        <section class="Recipient Information">
+                                <label for="Fname">First name</label>
+                                <input type="text" name="Fname" id="Fname" minlength="1" maxlength="50">
+                            <br>
+                                <label for="Lname">Last name</label>
+                                <input type="text" name="Lname" id="Lname" minlength="1" maxlength="50">
+                            <br>
+                                <label for="Phone">Phone number (with area code)</label>
+                                <input type="tel" name="Phone" id="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                            <br>
+                                <label for="Email">Email</label>
+                                <input type="text" name="Email" id="Email">
+                            <br>
+                                <label for="Address1">Primary address</label>
+                                <input type="text" name="Address1" id="Address1">
+                            <br>
+                                <label for="Address2">Alternate address</label>
+                                <input type="text" name="Address2" id="Address2">
+                            <br>
+                                <label for="City">City</label>
+                                <input type="text" name="City" id="City" maxlength="50">
+                            <br>
+                                <label for="State">State</label>
+                                <input type="text" name="State" id="State" minlength="3" maxlength="50">
+                            <br>
+                                <label for="Zip">Zip code</label>
+                                <input type="text" name="Zip" id="Zip" minlength="5" maxlength="5">
+                        </section>
+                    </form>
+                </div>
+            <button onclick="Loan()">Loan Artwork</button>
+                <div class="selection" id=Loan>
+                    <form method="POST">
+                        <section class="Loan Date">
+                                <label for="Date">Loan Date Out</label>
+                                <input type="date" name="Acquireddt" id="Acquireddt">
+                            <br>
+                                <label for="Date">Requested Return Date</label>
+                                <input type="date" name="Acquireddt" id="Acquireddt">
+                            <br>
+                                <label for="Description">Description</label>
+                                <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+                            <br>
+                        </section>
+                    <h4>Recipient Information:</h4>
+                        <section class="Recipient Information">
+                                <label for="Fname">First name</label>
+                                <input type="text" name="Fname" id="Fname" minlength="1" maxlength="50">
+                            <br>
+                                <label for="Lname">Last name</label>
+                                <input type="text" name="Lname" id="Lname" minlength="1" maxlength="50">
+                            <br>
+                                <label for="Phone">Phone number (with area code)</label>
+                                <input type="tel" name="Phone" id="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                            <br>
+                                <label for="Email">Email</label>
+                                <input type="text" name="Email" id="Email">
+                            <br>
+                                <label for="Address1">Primary address</label>
+                                <input type="text" name="Address1" id="Address1">
+                            <br>
+                                <label for="Address2">Alternate address</label>
+                                <input type="text" name="Address2" id="Address2">
+                            <br>
+                                <label for="City">City</label>
+                                <input type="text" name="City" id="City" maxlength="50">
+                            <br>
+                                <label for="State">State</label>
+                                <input type="text" name="State" id="State" minlength="3" maxlength="50">
+                            <br>
+                                <label for="Zip">Zip code</label>
+                                <input type="text" name="Zip" id="Zip" minlength="5" maxlength="5">
+                        </section>
+                    </form>
+                </div>
+<script>
+    function NewLocation() {
+    var x = document.getElementById("NewLocation");
+    if (x.style.display === "none") {
+    x.style.display = "block";} 
+    else {
+    x.style.display = "none";}}
+</script>
+<script>
+    function Gift() {
+    var x = document.getElementById("Gift");
+    if (x.style.display === "none") {
+    x.style.display = "block";} 
+    else {
+    x.style.display = "none";}}
+</script>
+<script>
+    function Loan() {
+    var x = document.getElementById("Loan");
+    if (x.style.display === "none") {
+    x.style.display = "block";} 
+    else {
+    x.style.display = "none";}}
+</script>
+<hr>
         <section class="submission">
             <input type="submit" value="Submit">
         </section>
-    </form>
-        <script src="move-form.js"></script> 
-</body>
-</html>
+    <script src="move-form.js"></script> 
 </body>
 </html>
