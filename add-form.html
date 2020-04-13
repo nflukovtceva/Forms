@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <title>Add Form</title>
 </head>
 <body>
@@ -37,7 +38,7 @@
                         <br>
                         <br>
                             <label for="State">State</label>
-                            <input type="text" name="State" id="State" minlength="3" maxlength="50" required>
+                            <input type="text" name="State" id="State" minlength="2" maxlength="50" required>
                         <br>
                         <br>
                             <label for="City">City</label>
@@ -51,7 +52,6 @@
                             <label for="Shareholder">Is the artist a shareholder?</label>
                             <input type="checkbox" name="Shareholder" id="Shareholder">
                     </section>
-            <hr>
                 <h3>Art Information</h3>
                     <section class="Art Information">
                             <label for="Title">Title</label>
@@ -101,7 +101,6 @@
                             <label for="Media">Media</label>
                             <input type="text" name="Media" id="Media"  maxlength="10">     
                     </section>
-            <hr>
                 <h3>Art Location Information</h3>
                     <section class="Art Location Information">
                             <label for="City">City</label>
@@ -127,6 +126,7 @@
                         </section>
             <hr>
                 <section class="submission">
+                    <a href="http://localhost:5000/add-form-results"></a>
                     <input type="submit" id='query' value="Submit">
                 </section>
         </form>
